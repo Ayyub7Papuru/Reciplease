@@ -9,11 +9,18 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    @IBOutlet weak var addButton: UIButton!
+    let recipeService = RecipeService()
+    @IBOutlet weak var ingredientsTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
     }
-
+    @IBAction func clearButtonTapped(_ sender: UIButton) {
+    }
+    @IBAction func searchButton(_ sender: UIButton) {
+        recipeService.getDishes { (result) in
+        }
+    }
+    
 }
