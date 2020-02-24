@@ -18,11 +18,11 @@
 		B116E0C023F5C46500999B85 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0BF23F5C46500999B85 /* RecipesViewController.swift */; };
 		B116E0C423F5CC0A00999B85 /* TabBarControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0C323F5CC0A00999B85 /* TabBarControlViewController.swift */; };
 		B116E0C623F5CCA000999B85 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0C523F5CCA000999B85 /* TabBar.swift */; };
-		B123D1A623FAFB740049868E /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B123D1A423FAFB740049868E /* RecipeTableViewCell.swift */; };
-		B123D1A723FAFB740049868E /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B123D1A523FAFB740049868E /* RecipeTableViewCell.xib */; };
 		B15CFE9323FEED7400B8AE98 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9223FEED7400B8AE98 /* RecipeService.swift */; };
 		B15CFE9523FEF19D00B8AE98 /* RecipeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9423FEF19D00B8AE98 /* RecipeStruct.swift */; };
 		B15CFE9723FEF51B00B8AE98 /* RecipeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9623FEF51B00B8AE98 /* RecipeSession.swift */; };
+		B1FDF103240431B100BF7F8D /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF101240431B100BF7F8D /* TestTableViewCell.swift */; };
+		B1FDF104240431B100BF7F8D /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF102240431B100BF7F8D /* TestTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,11 +41,11 @@
 		B116E0BF23F5C46500999B85 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		B116E0C323F5CC0A00999B85 /* TabBarControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControlViewController.swift; sourceTree = "<group>"; };
 		B116E0C523F5CCA000999B85 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		B123D1A423FAFB740049868E /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
-		B123D1A523FAFB740049868E /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 		B15CFE9223FEED7400B8AE98 /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
 		B15CFE9423FEF19D00B8AE98 /* RecipeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStruct.swift; sourceTree = "<group>"; };
 		B15CFE9623FEF51B00B8AE98 /* RecipeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSession.swift; sourceTree = "<group>"; };
+		B1FDF101240431B100BF7F8D /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		B1FDF102240431B100BF7F8D /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				B116E0AA23F5B0F000999B85 /* Main.storyboard */,
+				B1FDF101240431B100BF7F8D /* TestTableViewCell.swift */,
+				B1FDF102240431B100BF7F8D /* TestTableViewCell.xib */,
 				B116E0B223F5B0F100999B85 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -157,8 +159,6 @@
 		B15CFE9B23FF034900B8AE98 /* Xib cell */ = {
 			isa = PBXGroup;
 			children = (
-				B123D1A523FAFB740049868E /* RecipeTableViewCell.xib */,
-				B123D1A423FAFB740049868E /* RecipeTableViewCell.swift */,
 			);
 			path = "Xib cell";
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 				B116E0B423F5B0F100999B85 /* LaunchScreen.storyboard in Resources */,
 				B116E0B123F5B0F100999B85 /* Assets.xcassets in Resources */,
 				B116E0AC23F5B0F000999B85 /* Main.storyboard in Resources */,
-				B123D1A723FAFB740049868E /* RecipeTableViewCell.xib in Resources */,
+				B1FDF104240431B100BF7F8D /* TestTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,12 +335,12 @@
 				B116E0BC23F5B2A400999B85 /* SearchViewController.swift in Sources */,
 				B116E0AF23F5B0F000999B85 /* Reciplease.xcdatamodeld in Sources */,
 				B15CFE9723FEF51B00B8AE98 /* RecipeSession.swift in Sources */,
+				B1FDF103240431B100BF7F8D /* TestTableViewCell.swift in Sources */,
 				B116E0BE23F5B2C100999B85 /* FavoritesViewController.swift in Sources */,
 				B15CFE9323FEED7400B8AE98 /* RecipeService.swift in Sources */,
 				B116E0C023F5C46500999B85 /* RecipesViewController.swift in Sources */,
 				B116E0A723F5B0F000999B85 /* AppDelegate.swift in Sources */,
 				B116E0C623F5CCA000999B85 /* TabBar.swift in Sources */,
-				B123D1A623FAFB740049868E /* RecipeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

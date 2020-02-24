@@ -9,22 +9,33 @@
 import UIKit
 
 class RecipesViewController: UIViewController {
-
+    @IBOutlet weak var recipesTableView: UITableView!
+    let recipe = ["Tuna", "Merguez"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        recipesTableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellReuseIdentifier: "recipeCell")
+          recipesTableView.register(UINib(nibName: "TestTableViewCell", bundle: nil), forCellReuseIdentifier: "recipeCell")
+    }
 
-        // Do any additional setup after loading the view.
+}
+
+extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return recipe.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as! RecipeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as! TestTableViewCell
+//        cell.recipeNameLabel.text = recipe[indexPath.row]
+        cell.testLabel.text = recipe[indexPath.row]
+        return cell
     }
-    */
-
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.frame.height / 2.5
+    }
+    
 }
