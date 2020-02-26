@@ -13,16 +13,15 @@ enum RecipeError: Error {
 }
 
 class RecipeService {
-    let session: AlamoSession
+    let session: RecipeProtocol
     
-    init(session: AlamoSession = RecipeSession()) {
+    init(session: RecipeProtocol = RecipeSession()) {
         self.session = session
     }
     
     
     func getDishes(callback: @escaping (Result<Recipe, Error>) -> Void) {
-        guard let url = URL(string: "https://api.edamam.com/search?q=Tuna&app_id=24c2394f&app_key=c4cf9f8655c9adb5f9ca07af37f4e372&from=0&to=7") else { return }
-        
+        guard let url = URL(string: "\(session.myUrl)" ) else { return }
         session.request(with: url) { (DataResponse) in
             guard let data = DataResponse.data else {
                 callback(.failure(RecipeError.NoData))

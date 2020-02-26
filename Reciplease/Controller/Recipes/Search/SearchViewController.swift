@@ -26,13 +26,12 @@ class SearchViewController: UIViewController {
     
     @IBAction func clearButtonTapped(_ sender: UIButton) {
         ingredients.removeAll()
-        let indexPath = IndexPath(item: ingredients.count, section: 0)
-        ingredientsTableView.deleteRows(at: [indexPath], with: .fade)
         ingredientsTableView.reloadData()
         
     }
     @IBAction func searchButton(_ sender: UIButton) {
         recipeService.getDishes { (result) in
+            print(result)
         }
     }
     @IBAction func addButtonTapped(_ sender: UIButton) {

@@ -10,7 +10,7 @@ import UIKit
 
 class RecipesViewController: UIViewController {
     @IBOutlet weak var recipesTableView: UITableView!
-    let recipe = ["Tuna", "Merguez"]
+    let recipe = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.height / 2.5
+        return tableView.frame.height / 3
     }
     
 }
