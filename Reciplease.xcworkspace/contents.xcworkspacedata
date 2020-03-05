@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/sayajinpapuru/Desktop/Reciplease/Reciplease/View/Storyboard/IngredientsTableViewCell.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/sayajinpapuru/Desktop/Reciplease/Reciplease/View/Storyboard/IngredientsTableViewCell.xib">
-   </FileRef>
-   <FileRef
       location = "group:Reciplease.xcodeproj">
    </FileRef>
    <FileRef

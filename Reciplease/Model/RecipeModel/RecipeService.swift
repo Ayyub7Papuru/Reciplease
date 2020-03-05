@@ -13,32 +13,27 @@ enum RecipeError: Error {
 }
 
 class RecipeService {
-    let session: RecipeProtocol
+    let session = RecipeSession()
     
-    init(session: RecipeProtocol = RecipeSession()) {
-        self.session = session
-    }
-    
-    
-    func getDishes(callback: @escaping (Result<Recipe, Error>) -> Void) {
-        guard let url = URL(string: "\(session.myUrl)" ) else { return }
+    func getDishes(ingredients: [String], callback: @escaping (Result<Reciplease, Error>) -> Void) {
+        guard let url = URL(string: "https://api.edamam.com/search?app_id=24c2394f&app_key=c4cf9f8655c9adb5f9ca07af37f4e372&q=\(ingredients.joined(separator: ","))" ) else { return }
         session.request(with: url) { (DataResponse) in
             guard let data = DataResponse.data else {
                 callback(.failure(RecipeError.NoData))
                 return
             }
-            print(data)
             
             guard DataResponse.response?.statusCode == 200 else {
                 callback(.failure(RecipeError.NoResponse))
                 return
             }
             
-            guard let dataDecoded = try? JSONDecoder().decode(Recipe.self, from: data) else {
+            guard let dataDecoded = try? JSONDecoder().decode(Reciplease.self, from: data) else {
                 callback(.failure(RecipeError.NoJSON))
                 return
             }
             callback(.success(dataDecoded))
+            print(dataDecoded)
         }
     }
 }

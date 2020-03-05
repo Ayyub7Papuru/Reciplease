@@ -15,14 +15,14 @@
 		B116E0B423F5B0F100999B85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B116E0B223F5B0F100999B85 /* LaunchScreen.storyboard */; };
 		B116E0BC23F5B2A400999B85 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0BB23F5B2A400999B85 /* SearchViewController.swift */; };
 		B116E0BE23F5B2C100999B85 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0BD23F5B2C100999B85 /* FavoritesViewController.swift */; };
-		B116E0C023F5C46500999B85 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0BF23F5C46500999B85 /* RecipesViewController.swift */; };
 		B116E0C423F5CC0A00999B85 /* TabBarControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0C323F5CC0A00999B85 /* TabBarControlViewController.swift */; };
 		B116E0C623F5CCA000999B85 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0C523F5CCA000999B85 /* TabBar.swift */; };
+		B13E40642407EF1E000754E4 /* DishesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13E40622407EF1E000754E4 /* DishesTableViewCell.swift */; };
+		B13E40652407EF1E000754E4 /* DishesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B13E40632407EF1E000754E4 /* DishesTableViewCell.xib */; };
+		B13E40672407F382000754E4 /* DishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13E40662407F382000754E4 /* DishesViewController.swift */; };
 		B15CFE9323FEED7400B8AE98 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9223FEED7400B8AE98 /* RecipeService.swift */; };
 		B15CFE9523FEF19D00B8AE98 /* RecipeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9423FEF19D00B8AE98 /* RecipeStruct.swift */; };
 		B15CFE9723FEF51B00B8AE98 /* RecipeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9623FEF51B00B8AE98 /* RecipeSession.swift */; };
-		B1FDF103240431B100BF7F8D /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF101240431B100BF7F8D /* TestTableViewCell.swift */; };
-		B1FDF104240431B100BF7F8D /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF102240431B100BF7F8D /* TestTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,14 +38,14 @@
 		B116E0B523F5B0F100999B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B116E0BB23F5B2A400999B85 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B116E0BD23F5B2C100999B85 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		B116E0BF23F5C46500999B85 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		B116E0C323F5CC0A00999B85 /* TabBarControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControlViewController.swift; sourceTree = "<group>"; };
 		B116E0C523F5CCA000999B85 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		B13E40622407EF1E000754E4 /* DishesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesTableViewCell.swift; sourceTree = "<group>"; };
+		B13E40632407EF1E000754E4 /* DishesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishesTableViewCell.xib; sourceTree = "<group>"; };
+		B13E40662407F382000754E4 /* DishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesViewController.swift; sourceTree = SOURCE_ROOT; };
 		B15CFE9223FEED7400B8AE98 /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
 		B15CFE9423FEF19D00B8AE98 /* RecipeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStruct.swift; sourceTree = "<group>"; };
 		B15CFE9623FEF51B00B8AE98 /* RecipeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSession.swift; sourceTree = "<group>"; };
-		B1FDF101240431B100BF7F8D /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
-		B1FDF102240431B100BF7F8D /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +93,7 @@
 		B159C38823F8332C00C2B8CD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B13E40662407F382000754E4 /* DishesViewController.swift */,
 				B15CFE9E23FF038900B8AE98 /* Recipes */,
 				B15CFE9F23FF03BE00B8AE98 /* TabBarController */,
 			);
@@ -149,9 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				B116E0AA23F5B0F000999B85 /* Main.storyboard */,
-				B1FDF101240431B100BF7F8D /* TestTableViewCell.swift */,
-				B1FDF102240431B100BF7F8D /* TestTableViewCell.xib */,
 				B116E0B223F5B0F100999B85 /* LaunchScreen.storyboard */,
+				B13E40622407EF1E000754E4 /* DishesTableViewCell.swift */,
+				B13E40632407EF1E000754E4 /* DishesTableViewCell.xib */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -184,7 +185,6 @@
 			children = (
 				B15CFE9D23FF037300B8AE98 /* Favorites */,
 				B15CFE9C23FF036500B8AE98 /* Search */,
-				B116E0BF23F5C46500999B85 /* RecipesViewController.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 				B116E0B423F5B0F100999B85 /* LaunchScreen.storyboard in Resources */,
 				B116E0B123F5B0F100999B85 /* Assets.xcassets in Resources */,
 				B116E0AC23F5B0F000999B85 /* Main.storyboard in Resources */,
-				B1FDF104240431B100BF7F8D /* TestTableViewCell.xib in Resources */,
+				B13E40652407EF1E000754E4 /* DishesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,15 +331,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B15CFE9523FEF19D00B8AE98 /* RecipeStruct.swift in Sources */,
+				B13E40642407EF1E000754E4 /* DishesTableViewCell.swift in Sources */,
 				B116E0C423F5CC0A00999B85 /* TabBarControlViewController.swift in Sources */,
 				B116E0BC23F5B2A400999B85 /* SearchViewController.swift in Sources */,
 				B116E0AF23F5B0F000999B85 /* Reciplease.xcdatamodeld in Sources */,
 				B15CFE9723FEF51B00B8AE98 /* RecipeSession.swift in Sources */,
-				B1FDF103240431B100BF7F8D /* TestTableViewCell.swift in Sources */,
 				B116E0BE23F5B2C100999B85 /* FavoritesViewController.swift in Sources */,
 				B15CFE9323FEED7400B8AE98 /* RecipeService.swift in Sources */,
-				B116E0C023F5C46500999B85 /* RecipesViewController.swift in Sources */,
 				B116E0A723F5B0F000999B85 /* AppDelegate.swift in Sources */,
+				B13E40672407F382000754E4 /* DishesViewController.swift in Sources */,
 				B116E0C623F5CCA000999B85 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

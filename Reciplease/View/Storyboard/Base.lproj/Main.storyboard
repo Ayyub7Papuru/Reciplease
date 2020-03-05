@@ -79,7 +79,6 @@
                                 </state>
                                 <connections>
                                     <action selector="searchButton:" destination="PV5-8z-POa" eventType="touchUpInside" id="lhg-Ti-Aea"/>
-                                    <segue destination="RGX-OD-Yyw" kind="show" id="1i1-nQ-g4i"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Exy-mp-05a">
@@ -134,26 +133,37 @@
                     <connections>
                         <outlet property="ingredientsTableView" destination="Exy-mp-05a" id="Cd7-ga-lqj"/>
                         <outlet property="ingredientsTextField" destination="MGX-Wg-3NK" id="DIa-eO-bI2"/>
+                        <segue destination="RGX-OD-Yyw" kind="show" identifier="searchToDish" id="a0c-wV-A3L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7S3-Hx-e82" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1850.7246376811595" y="-147.32142857142856"/>
         </scene>
-        <!--Recipes View Controller-->
+        <!--Dishes View Controller-->
         <scene sceneID="gFe-jk-VGu">
             <objects>
-                <viewController id="RGX-OD-Yyw" customClass="RecipesViewController" customModule="Reciplease" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RGX-OD-Yyw" customClass="DishesViewController" customModule="Reciplease" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OHg-SO-yAT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iAt-rz-tab">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iAt-rz-tab" userLabel="Dishes Table View">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dishCel" id="f88-50-Ijf" customClass="DishesTableViewCell" customModule="Reciplease" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f88-50-Ijf" id="vd3-nI-zLo">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="RGX-OD-Yyw" id="zpA-Gy-IzM"/>
-                                    <outlet property="delegate" destination="RGX-OD-Yyw" id="8Zz-ql-TIA"/>
+                                    <outlet property="dataSource" destination="RGX-OD-Yyw" id="56G-P2-5bD"/>
+                                    <outlet property="delegate" destination="RGX-OD-Yyw" id="6wu-Zy-Ia5"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -168,7 +178,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="drn-ri-UWY"/>
                     <connections>
-                        <outlet property="recipesTableView" destination="iAt-rz-tab" id="AxV-3f-IbR"/>
+                        <outlet property="dishesTableView" destination="iAt-rz-tab" id="tdl-L8-2lg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibf-AL-tVi" userLabel="First Responder" sceneMemberID="firstResponder"/>

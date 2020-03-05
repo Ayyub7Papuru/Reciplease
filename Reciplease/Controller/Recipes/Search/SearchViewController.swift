@@ -9,9 +9,12 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    var ingredients = [String]()
     
+    // MARK: - Properties
+    var ingredients = [String]()
+    var recipes: Reciplease?
     let recipeService = RecipeService()
+    
     @IBOutlet weak var ingredientsTextField: UITextField!
     @IBOutlet weak var ingredientsTableView: UITableView!
     
@@ -24,14 +27,32 @@ class SearchViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dishesViewController = segue.destination as! DishesViewController
+        dishesViewController.recipes = recipes
+    }
+    
     @IBAction func clearButtonTapped(_ sender: UIButton) {
         ingredients.removeAll()
         ingredientsTableView.reloadData()
         
     }
     @IBAction func searchButton(_ sender: UIButton) {
-        recipeService.getDishes { (result) in
-            print(result)
+        recipeService.getDishes(ingredients: ingredients) { (result) in
+            switch result {
+            case .success(let recipes):
+                DispatchQueue.main.async {
+                    self.recipes = recipes
+                    self.performSegue(withIdentifier: "searchToDish", sender: nil)
+                }
+            case .failure(_ ):
+                let alert = UIAlertController(title: "No connection", message: "", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                
+                self.present(alert, animated: true)
+                
+            }
         }
     }
     @IBAction func addButtonTapped(_ sender: UIButton) {
@@ -52,8 +73,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = ingredients[indexPath.row]
         return cell
     }
-    
-    
 }
 
 
