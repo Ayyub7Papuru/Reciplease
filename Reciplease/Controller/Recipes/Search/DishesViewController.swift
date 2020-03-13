@@ -11,6 +11,13 @@ import UIKit
 class DishesViewController: UIViewController {
     @IBOutlet weak var dishesTableView: UITableView!
     var recipes: Reciplease?
+    var recipe: Recipe?
+    
+    var dishName: String = ""
+    
+    
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +30,7 @@ class DishesViewController: UIViewController {
 
 
 extension DishesViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes?.hits.count ?? 0
     }
@@ -37,7 +45,18 @@ extension DishesViewController: UITableViewDataSource, UITableViewDelegate {
         return dishesTableView.frame.height / 3
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! DishesTableViewCell
+        dishName = cell.dishNameLabel.text ?? ""
+        
+        performSegue(withIdentifier: "cellToRecipe", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "cellToRecipe") {
+            let info = segue.destination as! RecipeViewController
+            info.myString = dishName
+        }
+    }
+
 }

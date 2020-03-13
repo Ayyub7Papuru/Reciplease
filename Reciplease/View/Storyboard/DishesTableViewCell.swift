@@ -21,7 +21,7 @@ class DishesTableViewCell: UITableViewCell {
             dishNameLabel.text = recipe?.label
             ingredientsLabel.text = recipe?.ingredientLines.joined(separator: ", ")
             rateLabel.text = String(recipe?.yield ?? 0) + "k" 
-            timeCookLabel.text = String(recipe?.totalTime ?? 0)
+            timeCookLabel.text = String(recipe?.totalTime ?? 0) + "mn"
             dishImageView.sd_setImage(with: URL(string: recipe?.image ?? ""), completed: nil)
             
             
