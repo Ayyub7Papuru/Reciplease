@@ -23,7 +23,7 @@ struct Recipe: Codable {
     let label: String
     let image: String
     let source: String
-    let yield: Double
+    let yield: Int
     let ingredientLines: [String]
     let ingredients: [Ingredient]
     let totalTime: Int

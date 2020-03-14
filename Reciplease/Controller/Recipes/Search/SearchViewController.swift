@@ -15,6 +15,7 @@ class SearchViewController: UIViewController {
     var recipes: Reciplease?
     let recipeService = RecipeService()
     
+    // MARK: - Outlets
     @IBOutlet weak var ingredientsTextField: UITextField!
     @IBOutlet weak var ingredientsTableView: UITableView!
     
@@ -23,6 +24,8 @@ class SearchViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(keyboard))
         view.addGestureRecognizer(tap)
     }
+    
+    //MARK: - Functions
     @objc func keyboard() {
         self.view.endEditing(true)
     }
@@ -63,6 +66,7 @@ class SearchViewController: UIViewController {
     
 }
 
+//MARK: - TableView Extension
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ingredients.count

@@ -12,7 +12,7 @@ import SDWebImage
 class DishesTableViewCell: UITableViewCell {
     @IBOutlet weak var dishNameLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
-    @IBOutlet weak var rateLabel: UILabel!
+    @IBOutlet weak var personsSlices: UILabel!
     @IBOutlet weak var timeCookLabel: UILabel!
     @IBOutlet weak var dishImageView: UIImageView!
     
@@ -20,7 +20,7 @@ class DishesTableViewCell: UITableViewCell {
         didSet {
             dishNameLabel.text = recipe?.label
             ingredientsLabel.text = recipe?.ingredientLines.joined(separator: ", ")
-            rateLabel.text = String(recipe?.yield ?? 0) + "k" 
+            personsSlices.text = String(recipe?.yield ?? 0)
             timeCookLabel.text = String(recipe?.totalTime ?? 0) + "mn"
             dishImageView.sd_setImage(with: URL(string: recipe?.image ?? ""), completed: nil)
             
