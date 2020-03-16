@@ -53,6 +53,9 @@ extension DishesViewController: UITableViewDataSource, UITableViewDelegate {
         dishName = cell.dishNameLabel.text ?? ""
         dishImage = cell.recipe?.image ?? ""
         dishIngredients = cell.recipe?.ingredientLines ?? [""]
+        dishSlices = String(cell.recipe?.yield ?? 0)
+        dishTime = String(cell.recipe?.totalTime ?? 0) + "mn"
+        
         performSegue(withIdentifier: "cellToRecipe", sender: nil)
     }
     
@@ -62,6 +65,8 @@ extension DishesViewController: UITableViewDataSource, UITableViewDelegate {
             info.recipeTitle = dishName
             info.recipeImage = dishImage
             info.recipeIngredients = dishIngredients
+            info.recipeSlices = dishSlices
+            info.recipeTime = dishTime
         }
     }
 

@@ -22,8 +22,8 @@ class RecipeViewController: UIViewController {
     var recipeTitle: String? = ""
     var recipeImage: String? = ""
     var recipeIngredients: [String?] = []
-    var recipeSlices: Int? = 0
-    var recipeTime: Int? = 0
+    var recipeSlices: String? = ""
+    var recipeTime: String? = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,12 @@ class RecipeViewController: UIViewController {
     func setUp() {
         recipeLabel.text = recipeTitle
         recipeImageView.sd_setImage(with: URL(string: recipeImage ?? ""), completed: nil)
+        slicesLabel.text = recipeSlices
+        totalTimeLabel.text = recipeTime
+    }
+    @available(iOS 13.0, *)
+    @IBAction func favButtonTapped(_ sender: UIBarButtonItem) {
+        sender.tintColor = .orange
     }
 }
 
@@ -48,5 +54,4 @@ extension RecipeViewController: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = recipeIngredients[indexPath.row]
         return cell
     }
-    
 }
