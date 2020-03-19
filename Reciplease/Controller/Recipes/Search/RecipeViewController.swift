@@ -18,12 +18,6 @@ class RecipeViewController: UIViewController {
     
     //MARK: - Properties
     var recipe: Recipe?
-    
-    var recipeTitle: String? = ""
-    var recipeImage: String? = ""
-    var recipeIngredients: [String?] = []
-    var recipeSlices: String? = ""
-    var recipeTime: String? = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +26,10 @@ class RecipeViewController: UIViewController {
     
     //MARK: - Functions
     func setUp() {
-        recipeLabel.text = recipeTitle
-        recipeImageView.sd_setImage(with: URL(string: recipeImage ?? ""), completed: nil)
-        slicesLabel.text = recipeSlices
-        totalTimeLabel.text = recipeTime
+        recipeLabel.text = recipe?.label
+        recipeImageView.sd_setImage(with: URL(string: recipe?.image ?? ""), completed: nil)
+        slicesLabel.text = String(recipe?.yield ?? 0)
+        totalTimeLabel.text = String(recipe?.totalTime ?? 0) + "mn"
     }
     @available(iOS 13.0, *)
     @IBAction func favButtonTapped(_ sender: UIBarButtonItem) {
@@ -46,12 +40,12 @@ class RecipeViewController: UIViewController {
 //MARK: - TableView Extension
 extension RecipeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipeIngredients.count
+        return recipe?.ingredientLines.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = recipeIngredientsTableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath)
-        cell.textLabel?.text = recipeIngredients[indexPath.row]
+        cell.textLabel?.text = recipe?.ingredientLines.joined(separator: ",")
         return cell
     }
 }

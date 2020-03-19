@@ -16,12 +16,6 @@ class DishesViewController: UIViewController {
     var recipes: Reciplease?
     var recipe: Recipe?
     
-    var dishName: String = ""
-    var dishImage: String = ""
-    var dishIngredients: [String] = []
-    var dishSlices: String = ""
-    var dishTime: String = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,24 +43,14 @@ extension DishesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! DishesTableViewCell
-        dishName = cell.dishNameLabel.text ?? ""
-        dishImage = cell.recipe?.image ?? ""
-        dishIngredients = cell.recipe?.ingredientLines ?? [""]
-        dishSlices = String(cell.recipe?.yield ?? 0)
-        dishTime = String(cell.recipe?.totalTime ?? 0) + "mn"
-        
+        recipe = recipes?.hits[indexPath.row].recipe
         performSegue(withIdentifier: "cellToRecipe", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "cellToRecipe") {
             let info = segue.destination as! RecipeViewController
-            info.recipeTitle = dishName
-            info.recipeImage = dishImage
-            info.recipeIngredients = dishIngredients
-            info.recipeSlices = dishSlices
-            info.recipeTime = dishTime
+            info.recipe = recipe
         }
     }
 
