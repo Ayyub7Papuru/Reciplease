@@ -15,11 +15,11 @@ struct Reciplease: Codable {
 
 // MARK: - Hit
 struct Hit: Codable {
-    let recipe: Recipe
+    let recipe: RecipesFaved
 }
 
 // MARK: - Recipe
-struct Recipe: Codable {
+struct RecipesFaved: Codable {
     let label: String
     let image: String
     let source: String

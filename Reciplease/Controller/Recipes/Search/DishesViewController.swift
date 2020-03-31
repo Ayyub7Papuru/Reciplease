@@ -14,7 +14,7 @@ class DishesViewController: UIViewController {
     
     //MARK: - Properties
     var recipes: Reciplease?
-    var recipe: Recipe?
+    var recipe: RecipesFaved?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +43,7 @@ extension DishesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         recipe = recipes?.hits[indexPath.row].recipe
         performSegue(withIdentifier: "cellToRecipe", sender: nil)
     }

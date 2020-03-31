@@ -16,7 +16,7 @@ class DishesTableViewCell: UITableViewCell {
     @IBOutlet weak var timeCookLabel: UILabel!
     @IBOutlet weak var dishImageView: UIImageView!
     
-    var recipe: Recipe? {
+    var recipe: RecipesFaved? {
         didSet {
             dishNameLabel.text = recipe?.label
             ingredientsLabel.text = recipe?.ingredientLines.joined(separator: ", ")

@@ -17,7 +17,10 @@ class RecipeViewController: UIViewController {
     @IBOutlet weak var totalTimeLabel: UILabel!
     
     //MARK: - Properties
-    var recipe: Recipe?
+    var recipe: RecipesFaved?
+    var recipesArray: [RecipesFaved] = []
+    var coreDataManager: CoreDataManager?
+    var coreDataStack: CoreDataStack?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +34,17 @@ class RecipeViewController: UIViewController {
         slicesLabel.text = String(recipe?.yield ?? 0)
         totalTimeLabel.text = String(recipe?.totalTime ?? 0) + "mn"
     }
-    @available(iOS 13.0, *)
     @IBAction func favButtonTapped(_ sender: UIBarButtonItem) {
-        sender.tintColor = .orange
+        saveRecipe()
     }
+    
+    private func saveRecipe() {
+        coreDataManager?.createRecipe(name: recipe?.label ?? "", source: recipe?.source ?? "", yield: String(recipe?.yield ?? 0), time: String(recipe?.totalTime ?? 0))
+        recipesArray.append(recipe!)
+        coreDataStack?.saveContext()
+        
+    }
+    
 }
 
 //MARK: - TableView Extension
@@ -45,7 +55,7 @@ extension RecipeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = recipeIngredientsTableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath)
-        cell.textLabel?.text = recipe?.ingredientLines.joined(separator: ",")
+        cell.textLabel?.text = recipe?.ingredientLines[indexPath.row]
         return cell
     }
 }

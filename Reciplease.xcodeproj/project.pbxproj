@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9FEA5D6DECFD9D3AB43944B2 /* Pods_Reciplease.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA4F81FDD29A3D09450977B /* Pods_Reciplease.framework */; };
-		B114F169241FF7FB007034C4 /* Reciplease.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B114F167241FF7FB007034C4 /* Reciplease.xcdatamodeld */; };
-		B114F16B241FF857007034C4 /* FavoriteRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114F16A241FF857007034C4 /* FavoriteRecipe.swift */; };
 		B116E0A723F5B0F000999B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0A623F5B0F000999B85 /* AppDelegate.swift */; };
 		B116E0AC23F5B0F000999B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B116E0AA23F5B0F000999B85 /* Main.storyboard */; };
 		B116E0B123F5B0F100999B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B116E0B023F5B0F100999B85 /* Assets.xcassets */; };
@@ -18,6 +16,9 @@
 		B116E0BE23F5B2C100999B85 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0BD23F5B2C100999B85 /* FavoritesViewController.swift */; };
 		B116E0C423F5CC0A00999B85 /* TabBarControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0C323F5CC0A00999B85 /* TabBarControlViewController.swift */; };
 		B116E0C623F5CCA000999B85 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0C523F5CCA000999B85 /* TabBar.swift */; };
+		B13B5A6D2429154A00031018 /* Reciplease.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B13B5A6B2429154A00031018 /* Reciplease.xcdatamodeld */; };
+		B13C2E212433B0BF00F1C694 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C2E202433B0BF00F1C694 /* CoreDataStack.swift */; };
+		B13C2E232433B10C00F1C694 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C2E222433B10C00F1C694 /* CoreDataManager.swift */; };
 		B13E40642407EF1E000754E4 /* DishesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13E40622407EF1E000754E4 /* DishesTableViewCell.swift */; };
 		B13E40652407EF1E000754E4 /* DishesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B13E40632407EF1E000754E4 /* DishesTableViewCell.xib */; };
 		B13E40672407F382000754E4 /* DishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13E40662407F382000754E4 /* DishesViewController.swift */; };
@@ -31,8 +32,6 @@
 		08606D1391F5CF692689627A /* Pods-Reciplease.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reciplease.debug.xcconfig"; path = "Target Support Files/Pods-Reciplease/Pods-Reciplease.debug.xcconfig"; sourceTree = "<group>"; };
 		48534E5727C00582997257E2 /* Pods-Reciplease.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reciplease.release.xcconfig"; path = "Target Support Files/Pods-Reciplease/Pods-Reciplease.release.xcconfig"; sourceTree = "<group>"; };
 		7DA4F81FDD29A3D09450977B /* Pods_Reciplease.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reciplease.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B114F168241FF7FB007034C4 /* Reciplease.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reciplease.xcdatamodel; sourceTree = "<group>"; };
-		B114F16A241FF857007034C4 /* FavoriteRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipe.swift; sourceTree = "<group>"; };
 		B116E0A323F5B0F000999B85 /* Reciplease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reciplease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B116E0A623F5B0F000999B85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B116E0AB23F5B0F000999B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +42,9 @@
 		B116E0BD23F5B2C100999B85 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		B116E0C323F5CC0A00999B85 /* TabBarControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControlViewController.swift; sourceTree = "<group>"; };
 		B116E0C523F5CCA000999B85 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		B13B5A6C2429154A00031018 /* Reciplease.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reciplease.xcdatamodel; sourceTree = "<group>"; };
+		B13C2E202433B0BF00F1C694 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		B13C2E222433B10C00F1C694 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B13E40622407EF1E000754E4 /* DishesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesTableViewCell.swift; sourceTree = "<group>"; };
 		B13E40632407EF1E000754E4 /* DishesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishesTableViewCell.xib; sourceTree = "<group>"; };
 		B13E40662407F382000754E4 /* DishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DishesViewController.swift; path = Reciplease/Controller/Recipes/Search/DishesViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -107,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				B15CFE9A23FF032F00B8AE98 /* Storyboard */,
-				B15CFE9B23FF034900B8AE98 /* Xib cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,10 +142,11 @@
 		B15CFE9923FF02FA00B8AE98 /* RecipeModel */ = {
 			isa = PBXGroup;
 			children = (
-				B114F167241FF7FB007034C4 /* Reciplease.xcdatamodeld */,
 				B15CFE9423FEF19D00B8AE98 /* RecipeStruct.swift */,
-				B114F16A241FF857007034C4 /* FavoriteRecipe.swift */,
+				B13C2E202433B0BF00F1C694 /* CoreDataStack.swift */,
+				B13C2E222433B10C00F1C694 /* CoreDataManager.swift */,
 				B15CFE9623FEF51B00B8AE98 /* RecipeSession.swift */,
+				B13B5A6B2429154A00031018 /* Reciplease.xcdatamodeld */,
 				B15CFE9223FEED7400B8AE98 /* RecipeService.swift */,
 			);
 			path = RecipeModel;
@@ -159,13 +161,6 @@
 				B13E40632407EF1E000754E4 /* DishesTableViewCell.xib */,
 			);
 			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		B15CFE9B23FF034900B8AE98 /* Xib cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Xib cell";
 			sourceTree = "<group>";
 		};
 		B15CFE9C23FF036500B8AE98 /* Search */ = {
@@ -336,18 +331,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B114F169241FF7FB007034C4 /* Reciplease.xcdatamodeld in Sources */,
+				B13B5A6D2429154A00031018 /* Reciplease.xcdatamodeld in Sources */,
 				B15CFE9523FEF19D00B8AE98 /* RecipeStruct.swift in Sources */,
 				B172B33E2423774900480295 /* RecipeViewController.swift in Sources */,
 				B13E40642407EF1E000754E4 /* DishesTableViewCell.swift in Sources */,
 				B116E0C423F5CC0A00999B85 /* TabBarControlViewController.swift in Sources */,
 				B116E0BC23F5B2A400999B85 /* SearchViewController.swift in Sources */,
+				B13C2E212433B0BF00F1C694 /* CoreDataStack.swift in Sources */,
 				B15CFE9723FEF51B00B8AE98 /* RecipeSession.swift in Sources */,
-				B114F16B241FF857007034C4 /* FavoriteRecipe.swift in Sources */,
 				B116E0BE23F5B2C100999B85 /* FavoritesViewController.swift in Sources */,
 				B15CFE9323FEED7400B8AE98 /* RecipeService.swift in Sources */,
 				B116E0A723F5B0F000999B85 /* AppDelegate.swift in Sources */,
 				B13E40672407F382000754E4 /* DishesViewController.swift in Sources */,
+				B13C2E232433B10C00F1C694 /* CoreDataManager.swift in Sources */,
 				B116E0C623F5CCA000999B85 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,12 +548,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B114F167241FF7FB007034C4 /* Reciplease.xcdatamodeld */ = {
+		B13B5A6B2429154A00031018 /* Reciplease.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B114F168241FF7FB007034C4 /* Reciplease.xcdatamodel */,
+				B13B5A6C2429154A00031018 /* Reciplease.xcdatamodel */,
 			);
-			currentVersion = B114F168241FF7FB007034C4 /* Reciplease.xcdatamodel */;
+			currentVersion = B13B5A6C2429154A00031018 /* Reciplease.xcdatamodel */;
 			path = Reciplease.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
