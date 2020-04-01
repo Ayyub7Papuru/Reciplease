@@ -7,20 +7,25 @@
 //
 
 import UIKit
-import CoreData
 
 class FavoritesViewController: UIViewController {
     
+    //MARK: - Outlets
+    
     @IBOutlet weak var favoriteTableView: UITableView!
     
-    var recipe: RecipesFaved?
-    var recipeVC = RecipeViewController()
+    //MARK: - Properties
+    
+    var coreDataManager: CoreDataManager?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let appdelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+              let coredataStack = appdelegate.coreDataStack
+        coreDataManager = CoreDataManager(coreDataStack: coredataStack)
         
-        favoriteTableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: nil), forCellReuseIdentifier: "favCell")
+        favoriteTableView.register(UINib(nibName: "DishesTableViewCell", bundle: nil), forCellReuseIdentifier: "dishCell")
 
     }
     
@@ -29,18 +34,15 @@ class FavoritesViewController: UIViewController {
 
 }
 
-extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipeVC.recipesArray.count
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = favoriteTableView.dequeueReusableCell(withIdentifier: "dishCell", for: indexPath) as! DishesTableViewCell
-        cell.recipe = recipeVC.recipesArray[indexPath.row]
-        return cell
-    }
-    
-    
-}
+//extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = favoriteTableView.dequeueReusableCell(withIdentifier: "dishCell", for: indexPath) as! DishesTableViewCell
+//    }
+//
+//
+//}
 

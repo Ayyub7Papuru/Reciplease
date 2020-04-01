@@ -18,12 +18,13 @@ class RecipeViewController: UIViewController {
     
     //MARK: - Properties
     var recipe: RecipesFaved?
-    var recipesArray: [RecipesFaved] = []
     var coreDataManager: CoreDataManager?
-    var coreDataStack: CoreDataStack?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let appdelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+              let coredataStack = appdelegate.coreDataStack
+        coreDataManager = CoreDataManager(coreDataStack: coredataStack)
         setUp()
     }
     
@@ -39,10 +40,7 @@ class RecipeViewController: UIViewController {
     }
     
     private func saveRecipe() {
-        coreDataManager?.createRecipe(name: recipe?.label ?? "", source: recipe?.source ?? "", yield: String(recipe?.yield ?? 0), time: String(recipe?.totalTime ?? 0))
-        recipesArray.append(recipe!)
-        coreDataStack?.saveContext()
-        
+        coreDataManager?.createRecipe(ingredients: recipe?.ingredientLines ?? [], name: recipe?.label ?? "", source: recipe?.source ?? "", yield: String(recipe?.yield ?? 0), time: String(recipe?.totalTime ?? 0))
     }
     
 }

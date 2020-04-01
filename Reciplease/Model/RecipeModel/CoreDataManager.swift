@@ -11,6 +11,8 @@ import CoreData
 
 class CoreDataManager {
     
+    //MARK: - Properties
+    
     private let coreDataStack: CoreDataStack
     private let managedObjectContext: NSManagedObjectContext
     
@@ -25,11 +27,13 @@ class CoreDataManager {
         self.managedObjectContext = coreDataStack.mainContext
     }
     
-   func createRecipe(name: String, source: String, yield: String, time: String) {
+    //MARK: - Functions
+    
+    func createRecipe(ingredients: [String], name: String, source: String, yield: String, time: String) {
         let recipeFaved = FavoriteRecipe(context: managedObjectContext)
         recipeFaved.name = name
         recipeFaved.source = source
-//        recipeFaved.ingredients = String(ingredients)
+        recipeFaved.ingredients = ingredients
         recipeFaved.time = time
         recipeFaved.yield = yield
         coreDataStack.saveContext()
@@ -39,5 +43,13 @@ class CoreDataManager {
         recipesFav.forEach { managedObjectContext.delete($0)}
         coreDataStack.saveContext()
     }
+    
+//    func deleteRecipe(with name: String) {
+//
+//    }
+    
+//    func checkRecipe(with name: String) {
+//
+//    }
 
 }
