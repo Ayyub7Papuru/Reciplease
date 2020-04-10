@@ -14,7 +14,7 @@ class DishesViewController: UIViewController {
     
     //MARK: - Properties
     var recipes: Reciplease?
-    var recipe: RecipesFaved?
+    var recipe: Recipe?
     
     override func viewDidLoad() {
         super.viewDidLoad()

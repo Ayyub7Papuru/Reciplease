@@ -16,7 +16,7 @@ class DishesTableViewCell: UITableViewCell {
     @IBOutlet weak var timeCookLabel: UILabel!
     @IBOutlet weak var dishImageView: UIImageView!
     
-    var recipe: RecipesFaved? {
+    var recipe: Recipe? {
         didSet {
             dishNameLabel.text = recipe?.label
             ingredientsLabel.text = recipe?.ingredientLines.joined(separator: ", ")
@@ -27,5 +27,13 @@ class DishesTableViewCell: UITableViewCell {
             
         }
     }
-    
+   
+    var favoriteRecipe: FavoriteRecipe? {
+            didSet {
+            dishNameLabel.text = favoriteRecipe?.name
+            ingredientsLabel.text = favoriteRecipe?.ingredients?.joined(separator: ",")
+            personsSlices.text = favoriteRecipe?.yield
+            timeCookLabel.text = favoriteRecipe?.time
+        }
+    }
 }

@@ -29,13 +29,14 @@ class CoreDataManager {
     
     //MARK: - Functions
     
-    func createRecipe(ingredients: [String], name: String, source: String, yield: String, time: String) {
+    func createRecipe(ingredients: [String], name: String, source: String, yield: String, time: String, data: Data?) {
         let recipeFaved = FavoriteRecipe(context: managedObjectContext)
         recipeFaved.name = name
         recipeFaved.source = source
         recipeFaved.ingredients = ingredients
         recipeFaved.time = time
         recipeFaved.yield = yield
+        recipeFaved.image = data
         coreDataStack.saveContext()
     }
     
@@ -44,12 +45,24 @@ class CoreDataManager {
         coreDataStack.saveContext()
     }
     
-//    func deleteRecipe(with name: String) {
-//
-//    }
+    func deleteRecipe(named name: String) {
+        let request: NSFetchRequest<FavoriteRecipe> = FavoriteRecipe.fetchRequest()
+        request.predicate = NSPredicate(format: "name = %@", name)
+        guard let recipesFav = try? managedObjectContext.fetch(request) else { return }
+        guard let recipe = recipesFav.first else { return }
+        managedObjectContext.delete(recipe)
+        coreDataStack.saveContext()
+    }
     
-//    func checkRecipe(with name: String) {
-//
-//    }
-
+    func isRecipeRegistered(with name: String) -> Bool {
+        let request: NSFetchRequest<FavoriteRecipe> = FavoriteRecipe.fetchRequest()
+        request.predicate = NSPredicate(format: "name = %@", name)
+        guard let recipesFav = try? managedObjectContext.fetch(request) else { return false}
+        
+        if recipesFav.isEmpty {
+            return false
+        }
+        
+        return true
+    }
 }
