@@ -325,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kzf-18-B4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3493" y="-145"/>
+            <point key="canvasLocation" x="4003" y="183"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Je1-LC-8S8">
@@ -383,11 +383,12 @@
                     <navigationItem key="navigationItem" id="JdU-XF-ThB"/>
                     <connections>
                         <outlet property="favoriteTableView" destination="WDZ-rl-igh" id="OKb-58-N2U"/>
+                        <segue destination="D0N-l2-Ivx" kind="show" identifier="favCellToRecipe" id="G0u-Z5-AcZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zA-hv-86q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1851" y="570"/>
+            <point key="canvasLocation" x="2712" y="570"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FWA-nf-uTv">
@@ -436,4 +437,7 @@
         <image name="person" width="512" height="512"/>
         <image name="time" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="G0u-Z5-AcZ"/>
+    </inferredMetricsTieBreakers>
 </document>

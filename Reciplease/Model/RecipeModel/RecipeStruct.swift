@@ -33,3 +33,12 @@ struct Recipe: Codable {
 struct Ingredient: Codable {
     let text: String
 }
+
+struct RecipeDetails {
+    var name: String
+    var ingredients: [String]
+    var yield: String
+    var time: String
+    var source: String
+    var data: Data?
+}

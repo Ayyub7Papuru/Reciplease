@@ -16,6 +16,8 @@
 		B116E0BE23F5B2C100999B85 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0BD23F5B2C100999B85 /* FavoritesViewController.swift */; };
 		B116E0C423F5CC0A00999B85 /* TabBarControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0C323F5CC0A00999B85 /* TabBarControlViewController.swift */; };
 		B116E0C623F5CCA000999B85 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0C523F5CCA000999B85 /* TabBar.swift */; };
+		B12BCB852450FA75007D4470 /* CoreDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BCB842450FA75007D4470 /* CoreDataManagerTest.swift */; };
+		B12BCB872450FA9B007D4470 /* MockCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BCB862450FA9B007D4470 /* MockCoreData.swift */; };
 		B13B5A6D2429154A00031018 /* Reciplease.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B13B5A6B2429154A00031018 /* Reciplease.xcdatamodeld */; };
 		B13C2E212433B0BF00F1C694 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C2E202433B0BF00F1C694 /* CoreDataStack.swift */; };
 		B13C2E232433B10C00F1C694 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C2E222433B10C00F1C694 /* CoreDataManager.swift */; };
@@ -27,7 +29,18 @@
 		B15CFE9523FEF19D00B8AE98 /* RecipeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9423FEF19D00B8AE98 /* RecipeStruct.swift */; };
 		B15CFE9723FEF51B00B8AE98 /* RecipeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9623FEF51B00B8AE98 /* RecipeSession.swift */; };
 		B172B33E2423774900480295 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B172B33D2423774900480295 /* RecipeViewController.swift */; };
+		B17D7904245C054F00191E7C /* Int+ConvertTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D7903245C054F00191E7C /* Int+ConvertTime.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B12BCB7F2450FA1D007D4470 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B116E09B23F5B0F000999B85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B116E0A223F5B0F000999B85;
+			remoteInfo = Reciplease;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		08606D1391F5CF692689627A /* Pods-Reciplease.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reciplease.debug.xcconfig"; path = "Target Support Files/Pods-Reciplease/Pods-Reciplease.debug.xcconfig"; sourceTree = "<group>"; };
@@ -43,6 +56,10 @@
 		B116E0BD23F5B2C100999B85 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		B116E0C323F5CC0A00999B85 /* TabBarControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControlViewController.swift; sourceTree = "<group>"; };
 		B116E0C523F5CCA000999B85 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		B12BCB7A2450FA1D007D4470 /* RecipleaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipleaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B12BCB7E2450FA1D007D4470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B12BCB842450FA75007D4470 /* CoreDataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTest.swift; sourceTree = "<group>"; };
+		B12BCB862450FA9B007D4470 /* MockCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreData.swift; sourceTree = "<group>"; };
 		B13B5A6C2429154A00031018 /* Reciplease.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reciplease.xcdatamodel; sourceTree = "<group>"; };
 		B13C2E202433B0BF00F1C694 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B13C2E222433B10C00F1C694 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -54,6 +71,7 @@
 		B15CFE9423FEF19D00B8AE98 /* RecipeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStruct.swift; sourceTree = "<group>"; };
 		B15CFE9623FEF51B00B8AE98 /* RecipeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSession.swift; sourceTree = "<group>"; };
 		B172B33D2423774900480295 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		B17D7903245C054F00191E7C /* Int+ConvertTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+ConvertTime.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +83,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B12BCB772450FA1D007D4470 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +98,7 @@
 			children = (
 				B116E0A523F5B0F000999B85 /* Reciplease */,
 				B116E0B523F5B0F100999B85 /* Info.plist */,
+				B12BCB7B2450FA1D007D4470 /* RecipleaseTests */,
 				B116E0A423F5B0F000999B85 /* Products */,
 				B6AAD3926DD90E68B8D0D264 /* Pods */,
 				B4FBB4514D87A76C27F59FEF /* Frameworks */,
@@ -83,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				B116E0A323F5B0F000999B85 /* Reciplease.app */,
+				B12BCB7A2450FA1D007D4470 /* RecipleaseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,10 +126,21 @@
 			path = Reciplease;
 			sourceTree = "<group>";
 		};
+		B12BCB7B2450FA1D007D4470 /* RecipleaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				B12BCB7E2450FA1D007D4470 /* Info.plist */,
+				B12BCB862450FA9B007D4470 /* MockCoreData.swift */,
+				B12BCB842450FA75007D4470 /* CoreDataManagerTest.swift */,
+			);
+			path = RecipleaseTests;
+			sourceTree = "<group>";
+		};
 		B142AD6B24405845009DFBEB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				B142AD6C24405866009DFBEB /* String+Data.swift */,
+				B17D7903245C054F00191E7C /* Int+ConvertTime.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,18 +286,41 @@
 			productReference = B116E0A323F5B0F000999B85 /* Reciplease.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B12BCB792450FA1D007D4470 /* RecipleaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B12BCB812450FA1D007D4470 /* Build configuration list for PBXNativeTarget "RecipleaseTests" */;
+			buildPhases = (
+				B12BCB762450FA1D007D4470 /* Sources */,
+				B12BCB772450FA1D007D4470 /* Frameworks */,
+				B12BCB782450FA1D007D4470 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B12BCB802450FA1D007D4470 /* PBXTargetDependency */,
+			);
+			name = RecipleaseTests;
+			productName = RecipleaseTests;
+			productReference = B12BCB7A2450FA1D007D4470 /* RecipleaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B116E09B23F5B0F000999B85 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "sayajin papuru";
 				TargetAttributes = {
 					B116E0A223F5B0F000999B85 = {
 						CreatedOnToolsVersion = 10.2;
+					};
+					B12BCB792450FA1D007D4470 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+						TestTargetID = B116E0A223F5B0F000999B85;
 					};
 				};
 			};
@@ -277,6 +338,7 @@
 			projectRoot = "";
 			targets = (
 				B116E0A223F5B0F000999B85 /* Reciplease */,
+				B12BCB792450FA1D007D4470 /* RecipleaseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,6 +352,13 @@
 				B116E0B123F5B0F100999B85 /* Assets.xcassets in Resources */,
 				B116E0AC23F5B0F000999B85 /* Main.storyboard in Resources */,
 				B13E40652407EF1E000754E4 /* DishesTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B12BCB782450FA1D007D4470 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,10 +426,28 @@
 				B13E40672407F382000754E4 /* DishesViewController.swift in Sources */,
 				B13C2E232433B10C00F1C694 /* CoreDataManager.swift in Sources */,
 				B116E0C623F5CCA000999B85 /* TabBar.swift in Sources */,
+				B17D7904245C054F00191E7C /* Int+ConvertTime.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B12BCB762450FA1D007D4470 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B12BCB872450FA9B007D4470 /* MockCoreData.swift in Sources */,
+				B12BCB852450FA75007D4470 /* CoreDataManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B12BCB802450FA1D007D4470 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B116E0A223F5B0F000999B85 /* Reciplease */;
+			targetProxy = B12BCB7F2450FA1D007D4470 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B116E0AA23F5B0F000999B85 /* Main.storyboard */ = {
@@ -536,6 +623,51 @@
 			};
 			name = Release;
 		};
+		B12BCB822450FA1D007D4470 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ST64UKQV4;
+				INFOPLIST_FILE = RecipleaseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SayajinPapuru.RecipleaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reciplease.app/Reciplease";
+			};
+			name = Debug;
+		};
+		B12BCB832450FA1D007D4470 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ST64UKQV4;
+				INFOPLIST_FILE = RecipleaseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SayajinPapuru.RecipleaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reciplease.app/Reciplease";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,6 +685,15 @@
 			buildConfigurations = (
 				B116E0B923F5B0F100999B85 /* Debug */,
 				B116E0BA23F5B0F100999B85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B12BCB812450FA1D007D4470 /* Build configuration list for PBXNativeTarget "RecipleaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B12BCB822450FA1D007D4470 /* Debug */,
+				B12BCB832450FA1D007D4470 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

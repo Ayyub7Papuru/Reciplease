@@ -50,9 +50,21 @@ extension DishesViewController: UITableViewDataSource, UITableViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "cellToRecipe") {
-            let info = segue.destination as! RecipeViewController
-            info.recipe = recipe
+            let recipeVC = segue.destination as! RecipeViewController
+            let recipeDetails = RecipeDetails(name: recipe?.label ?? "", ingredients: recipe?.ingredientLines ?? [], yield: String(recipe?.yield ?? 0), time: recipe?.totalTime.convertToTime ?? "NA", source: recipe?.source ?? "", data: recipe?.image.data)
+            recipeVC.recipeDetails = recipeDetails
         }
     }
 
+}
+
+extension Int {
+    var convertToTime: String {
+        get {
+            let minutes = self % (60 * 60) / 60
+            let hours = self / 60 / 60
+            let timeFormatString = String(format: "%01dh%02dm", hours, minutes)
+            return timeFormatString
+        }
+    }
 }

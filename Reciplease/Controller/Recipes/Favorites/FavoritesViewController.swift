@@ -17,6 +17,7 @@ class FavoritesViewController: UIViewController {
     //MARK: - Properties
     
     var coreDataManager: CoreDataManager?
+    var recipeDetails: RecipeDetails?
     
 
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class FavoritesViewController: UIViewController {
         coreDataManager = CoreDataManager(coreDataStack: coredataStack)
         
         favoriteTableView.register(UINib(nibName: "DishesTableViewCell", bundle: nil), forCellReuseIdentifier: "dishCell")
+        favoriteTableView.reloadData()
 
     }
 }
@@ -40,6 +42,20 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
         let favoriteRecipe = coreDataManager?.recipesFav[indexPath.row]
         cell.favoriteRecipe = favoriteRecipe
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        favoriteTableView.deselectRow(at: indexPath, animated: true)
+        let recipe = coreDataManager?.recipesFav[indexPath.row]
+        recipeDetails = RecipeDetails(name: recipe?.name ?? "", ingredients: recipe?.ingredients ?? [], yield: recipe?.yield ?? "NA", time: recipe?.time ?? "NA", source: recipe?.source ?? "", data: recipe?.image)
+        performSegue(withIdentifier: "favCellToRecipe", sender: nil)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "favCellToRecipe") {
+        let vc = segue.destination as! RecipeViewController
+            vc.recipeDetails = recipeDetails
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

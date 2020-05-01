@@ -34,6 +34,12 @@ class DishesTableViewCell: UITableViewCell {
             ingredientsLabel.text = favoriteRecipe?.ingredients?.joined(separator: ",")
             personsSlices.text = favoriteRecipe?.yield
             timeCookLabel.text = favoriteRecipe?.time
+                if let data = favoriteRecipe?.image {
+                    dishImageView.image = UIImage(data: data)
+                } else {
+                    
+                }
+            
         }
     }
 }
