@@ -29,10 +29,10 @@ class CoreDataManager {
     
     //MARK: - Functions
     
-    func createRecipe(ingredients: [String], name: String, source: String, yield: String, time: String, data: Data?) {
+    func createRecipe(ingredients: [String], name: String, url: String, yield: String, time: String, data: Data?) {
         let recipeFaved = FavoriteRecipe(context: managedObjectContext)
         recipeFaved.name = name
-        recipeFaved.source = source
+        recipeFaved.url = url
         recipeFaved.ingredients = ingredients
         recipeFaved.time = time
         recipeFaved.yield = yield

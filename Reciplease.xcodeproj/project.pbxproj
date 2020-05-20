@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9FEA5D6DECFD9D3AB43944B2 /* Pods_Reciplease.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA4F81FDD29A3D09450977B /* Pods_Reciplease.framework */; };
+		3133916FE1FB53147F833DBB /* Pods_RecipleaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D693026CC26207D7DA9AE80 /* Pods_RecipleaseTests.framework */; };
+		7216F66C7CF46661DB27D887 /* Pods_Reciplease.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F66DDD8B8C5D337C1D61EDF /* Pods_Reciplease.framework */; };
 		B116E0A723F5B0F000999B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116E0A623F5B0F000999B85 /* AppDelegate.swift */; };
 		B116E0AC23F5B0F000999B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B116E0AA23F5B0F000999B85 /* Main.storyboard */; };
 		B116E0B123F5B0F100999B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B116E0B023F5B0F100999B85 /* Assets.xcassets */; };
@@ -25,6 +26,10 @@
 		B13E40652407EF1E000754E4 /* DishesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B13E40632407EF1E000754E4 /* DishesTableViewCell.xib */; };
 		B13E40672407F382000754E4 /* DishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13E40662407F382000754E4 /* DishesViewController.swift */; };
 		B142AD6D24405866009DFBEB /* String+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142AD6C24405866009DFBEB /* String+Data.swift */; };
+		B1437E982472EAD300450433 /* Recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = B1437E972472EAD300450433 /* Recipe.json */; };
+		B1437EA02472EFBF00450433 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1437E9F2472EFBF00450433 /* FakeResponseData.swift */; };
+		B1437EA22472F03800450433 /* MockRecipeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1437EA12472F03800450433 /* MockRecipeSession.swift */; };
+		B1437EA62472F6A600450433 /* RecipeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1437EA52472F6A600450433 /* RecipeServiceTests.swift */; };
 		B15CFE9323FEED7400B8AE98 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9223FEED7400B8AE98 /* RecipeService.swift */; };
 		B15CFE9523FEF19D00B8AE98 /* RecipeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9423FEF19D00B8AE98 /* RecipeStruct.swift */; };
 		B15CFE9723FEF51B00B8AE98 /* RecipeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9623FEF51B00B8AE98 /* RecipeSession.swift */; };
@@ -43,9 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08606D1391F5CF692689627A /* Pods-Reciplease.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reciplease.debug.xcconfig"; path = "Target Support Files/Pods-Reciplease/Pods-Reciplease.debug.xcconfig"; sourceTree = "<group>"; };
-		48534E5727C00582997257E2 /* Pods-Reciplease.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reciplease.release.xcconfig"; path = "Target Support Files/Pods-Reciplease/Pods-Reciplease.release.xcconfig"; sourceTree = "<group>"; };
-		7DA4F81FDD29A3D09450977B /* Pods_Reciplease.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reciplease.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F66DDD8B8C5D337C1D61EDF /* Pods_Reciplease.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reciplease.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1917B41CC456E1E0EC584921 /* Pods-Reciplease.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reciplease.debug.xcconfig"; path = "Target Support Files/Pods-Reciplease/Pods-Reciplease.debug.xcconfig"; sourceTree = "<group>"; };
+		2D693026CC26207D7DA9AE80 /* Pods_RecipleaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipleaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		350120F584E4CCE1D950B359 /* Pods-RecipleaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipleaseTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipleaseTests/Pods-RecipleaseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4556B9B5494807EE57F7956A /* Pods-Reciplease.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reciplease.release.xcconfig"; path = "Target Support Files/Pods-Reciplease/Pods-Reciplease.release.xcconfig"; sourceTree = "<group>"; };
 		B116E0A323F5B0F000999B85 /* Reciplease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reciplease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B116E0A623F5B0F000999B85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B116E0AB23F5B0F000999B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,11 +74,16 @@
 		B13E40632407EF1E000754E4 /* DishesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishesTableViewCell.xib; sourceTree = "<group>"; };
 		B13E40662407F382000754E4 /* DishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DishesViewController.swift; path = Reciplease/Controller/Recipes/Search/DishesViewController.swift; sourceTree = SOURCE_ROOT; };
 		B142AD6C24405866009DFBEB /* String+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Data.swift"; sourceTree = "<group>"; };
+		B1437E972472EAD300450433 /* Recipe.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Recipe.json; sourceTree = "<group>"; };
+		B1437E9F2472EFBF00450433 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
+		B1437EA12472F03800450433 /* MockRecipeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecipeSession.swift; sourceTree = "<group>"; };
+		B1437EA52472F6A600450433 /* RecipeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeServiceTests.swift; sourceTree = "<group>"; };
 		B15CFE9223FEED7400B8AE98 /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
 		B15CFE9423FEF19D00B8AE98 /* RecipeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStruct.swift; sourceTree = "<group>"; };
 		B15CFE9623FEF51B00B8AE98 /* RecipeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSession.swift; sourceTree = "<group>"; };
 		B172B33D2423774900480295 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		B17D7903245C054F00191E7C /* Int+ConvertTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+ConvertTime.swift"; sourceTree = "<group>"; };
+		D76C3845DCD4A7143A3C4679 /* Pods-RecipleaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipleaseTests.release.xcconfig"; path = "Target Support Files/Pods-RecipleaseTests/Pods-RecipleaseTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FEA5D6DECFD9D3AB43944B2 /* Pods_Reciplease.framework in Frameworks */,
+				7216F66C7CF46661DB27D887 /* Pods_Reciplease.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3133916FE1FB53147F833DBB /* Pods_RecipleaseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +114,7 @@
 				B12BCB7B2450FA1D007D4470 /* RecipleaseTests */,
 				B116E0A423F5B0F000999B85 /* Products */,
 				B6AAD3926DD90E68B8D0D264 /* Pods */,
-				B4FBB4514D87A76C27F59FEF /* Frameworks */,
+				D963C78FB4BB6F77E1E49EAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +145,10 @@
 				B12BCB7E2450FA1D007D4470 /* Info.plist */,
 				B12BCB862450FA9B007D4470 /* MockCoreData.swift */,
 				B12BCB842450FA75007D4470 /* CoreDataManagerTest.swift */,
+				B1437E972472EAD300450433 /* Recipe.json */,
+				B1437E9F2472EFBF00450433 /* FakeResponseData.swift */,
+				B1437EA12472F03800450433 /* MockRecipeSession.swift */,
+				B1437EA52472F6A600450433 /* RecipeServiceTests.swift */,
 			);
 			path = RecipleaseTests;
 			sourceTree = "<group>";
@@ -247,21 +264,24 @@
 			path = TabBarController;
 			sourceTree = "<group>";
 		};
-		B4FBB4514D87A76C27F59FEF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7DA4F81FDD29A3D09450977B /* Pods_Reciplease.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		B6AAD3926DD90E68B8D0D264 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				08606D1391F5CF692689627A /* Pods-Reciplease.debug.xcconfig */,
-				48534E5727C00582997257E2 /* Pods-Reciplease.release.xcconfig */,
+				1917B41CC456E1E0EC584921 /* Pods-Reciplease.debug.xcconfig */,
+				4556B9B5494807EE57F7956A /* Pods-Reciplease.release.xcconfig */,
+				350120F584E4CCE1D950B359 /* Pods-RecipleaseTests.debug.xcconfig */,
+				D76C3845DCD4A7143A3C4679 /* Pods-RecipleaseTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D963C78FB4BB6F77E1E49EAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F66DDD8B8C5D337C1D61EDF /* Pods_Reciplease.framework */,
+				2D693026CC26207D7DA9AE80 /* Pods_RecipleaseTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,11 +291,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B116E0B823F5B0F100999B85 /* Build configuration list for PBXNativeTarget "Reciplease" */;
 			buildPhases = (
-				D2AFC035EB517D95593C1326 /* [CP] Check Pods Manifest.lock */,
+				C91F1AF2AD5269B0197687C2 /* [CP] Check Pods Manifest.lock */,
 				B116E09F23F5B0F000999B85 /* Sources */,
 				B116E0A023F5B0F000999B85 /* Frameworks */,
 				B116E0A123F5B0F000999B85 /* Resources */,
-				24FCE44D1486C4AB5BE6EAA7 /* [CP] Embed Pods Frameworks */,
+				50CDF30DC63E5B5227B8EA67 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,6 +310,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B12BCB812450FA1D007D4470 /* Build configuration list for PBXNativeTarget "RecipleaseTests" */;
 			buildPhases = (
+				79C553D20345D41FA31234DE /* [CP] Check Pods Manifest.lock */,
 				B12BCB762450FA1D007D4470 /* Sources */,
 				B12BCB772450FA1D007D4470 /* Frameworks */,
 				B12BCB782450FA1D007D4470 /* Resources */,
@@ -359,13 +380,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1437E982472EAD300450433 /* Recipe.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		24FCE44D1486C4AB5BE6EAA7 /* [CP] Embed Pods Frameworks */ = {
+		50CDF30DC63E5B5227B8EA67 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -382,7 +404,29 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Reciplease/Pods-Reciplease-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D2AFC035EB517D95593C1326 /* [CP] Check Pods Manifest.lock */ = {
+		79C553D20345D41FA31234DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RecipleaseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C91F1AF2AD5269B0197687C2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -435,7 +479,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B12BCB872450FA9B007D4470 /* MockCoreData.swift in Sources */,
+				B1437EA02472EFBF00450433 /* FakeResponseData.swift in Sources */,
+				B1437EA62472F6A600450433 /* RecipeServiceTests.swift in Sources */,
 				B12BCB852450FA75007D4470 /* CoreDataManagerTest.swift in Sources */,
+				B1437EA22472F03800450433 /* MockRecipeSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +634,7 @@
 		};
 		B116E0B923F5B0F100999B85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08606D1391F5CF692689627A /* Pods-Reciplease.debug.xcconfig */;
+			baseConfigurationReference = 1917B41CC456E1E0EC584921 /* Pods-Reciplease.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -606,7 +653,7 @@
 		};
 		B116E0BA23F5B0F100999B85 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48534E5727C00582997257E2 /* Pods-Reciplease.release.xcconfig */;
+			baseConfigurationReference = 4556B9B5494807EE57F7956A /* Pods-Reciplease.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -625,6 +672,7 @@
 		};
 		B12BCB822450FA1D007D4470 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 350120F584E4CCE1D950B359 /* Pods-RecipleaseTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -648,6 +696,7 @@
 		};
 		B12BCB832450FA1D007D4470 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D76C3845DCD4A7143A3C4679 /* Pods-RecipleaseTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;

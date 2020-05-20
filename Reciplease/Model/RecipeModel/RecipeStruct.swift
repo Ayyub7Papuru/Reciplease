@@ -22,7 +22,7 @@ struct Hit: Codable {
 struct Recipe: Codable {
     let label: String
     let image: String
-    let source: String
+    let url: String
     let yield: Int
     let ingredientLines: [String]
     let ingredients: [Ingredient]
@@ -39,6 +39,6 @@ struct RecipeDetails {
     var ingredients: [String]
     var yield: String
     var time: String
-    var source: String
+    var url: String
     var data: Data?
 }

@@ -16,10 +16,13 @@ class RecipeViewController: UIViewController {
     @IBOutlet weak var slicesLabel: UILabel!
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var favItemButton: UIBarButtonItem!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var getDirectionsButton: UIButton!
     
     //MARK: - Properties
     var coreDataManager: CoreDataManager?
     var recipeDetails: RecipeDetails?
+    var isComeFromFavorites: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,36 +30,65 @@ class RecipeViewController: UIViewController {
               let coredataStack = appdelegate.coreDataStack
         coreDataManager = CoreDataManager(coreDataStack: coredataStack)
         setUp()
+        checkFav()
+        recipeIngredientsTableView.tableFooterView = UIView()
     }
     
     //MARK: - Functions
     func setUp() {
         recipeLabel.text = recipeDetails?.name
-//        recipeImageView.sd_setImage(with: URL(string: recipe?.image ?? ""), completed: nil)
         slicesLabel.text = recipeDetails?.yield
         totalTimeLabel.text = recipeDetails?.time
         if let data = recipeDetails?.data {
             recipeImageView.image = UIImage(data: data)
         } else {
-            //Image par defaut
+            recipeImageView.image = UIImage(named: "noImage")
         }
         
     }
-    ///Lorsqu'on est dans recipeViewController, le coeur doit etre orange si la recette est dans les favoris, si on decoche le coeur la recette disparait des favoris. Lorsqu'on est dans le controller des favoris et qu'on decoche le coeur de la vue des details on retourne imédiatement dans l'ecran des favs.  Trouver un moyen, aller champion repose toi et reflechis bien a comment on va y arriver
+    func checkFav() {
+        guard let coreDataManager = coreDataManager else { return }
+        if coreDataManager.isRecipeRegistered(with: recipeDetails?.name ?? "") {
+            favItemButton.tintColor = .orange
+        } else {
+            favItemButton.tintColor = .lightGray
+        }
+    }
+        
     
-//    @IBAction func favButtonTapped(_ sender: UIBarButtonItem) {
-//        guard let coreDataManager = coreDataManager else { return }
-//        if coreDataManager.isRecipeRegistered(with: recipeDetails?.name ?? "") {
-//            coreDataManager.deleteRecipe(named: recipeDetails?.name ?? "")
-//            favItemButton.tintColor = .lightGray
-//        } else {
-//            saveRecipe()
-//            favItemButton.tintColor = .orange
-//        }
-//    }
- 
+    @IBAction func favButtonTapped(_ sender: UIBarButtonItem) {
+        guard let coreDataManager = coreDataManager else { return }
+        if coreDataManager.isRecipeRegistered(with: recipeDetails?.name ?? "") {
+            coreDataManager.deleteRecipe(named: recipeDetails?.name ?? "")
+            favItemButton.tintColor = .lightGray
+            if isComeFromFavorites {
+                navigationController?.popViewController(animated: true)
+            }
+        } else {
+            saveRecipe()
+            favItemButton.tintColor = .orange
+        }
+    }
+    @IBAction func getDirectionsButton(_ sender: UIButton) {
+        startActivityIndicator(sender)
+        if let url = URL(string: recipeDetails?.url ?? "https://www.google.com") {
+            UIApplication.shared.open(url)
+        }
+        stopActivityIndicator(sender)
+    }
+    
     private func saveRecipe() {
-        coreDataManager?.createRecipe(ingredients: recipeDetails?.ingredients ?? [], name: recipeDetails?.name ?? "", source: recipeDetails?.source ?? "", yield: recipeDetails?.yield ?? "NA", time: recipeDetails?.time ?? "NA", data: recipeDetails?.data)
+        coreDataManager?.createRecipe(ingredients: recipeDetails?.ingredients ?? [], name: recipeDetails?.name ?? "", url: recipeDetails?.url ?? "", yield: recipeDetails?.yield ?? "NA", time: recipeDetails?.time ?? "NA", data: recipeDetails?.data)
+    }
+    
+    func startActivityIndicator(_ sender: UIButton) {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        sender.setTitle("", for: .normal)
+    }
+    func stopActivityIndicator(_ sender: UIButton) {
+        activityIndicator.stopAnimating()
+        sender.setTitle("Get directions", for: .normal)
     }
     
 }

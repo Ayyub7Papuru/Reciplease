@@ -12,8 +12,12 @@ enum RecipeError: Error {
    case NoData, NoResponse, NoJSON
 }
 
-class RecipeService {
-    let session = RecipeSession()
+final class RecipeService {
+    private var session: RecipeSession
+    
+    init(session: RecipeSession = RecipeSession()) {
+        self.session = session
+    }
     
     func getDishes(ingredients: [String], callback: @escaping (Result<Reciplease, Error>) -> Void) {
         guard let url = URL(string: "https://api.edamam.com/search?app_id=24c2394f&app_key=c4cf9f8655c9adb5f9ca07af37f4e372&q=\(ingredients.joined(separator: ","))" ) else { return }

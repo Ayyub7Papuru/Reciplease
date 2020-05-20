@@ -51,8 +51,9 @@ extension DishesViewController: UITableViewDataSource, UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "cellToRecipe") {
             let recipeVC = segue.destination as! RecipeViewController
-            let recipeDetails = RecipeDetails(name: recipe?.label ?? "", ingredients: recipe?.ingredientLines ?? [], yield: String(recipe?.yield ?? 0), time: recipe?.totalTime.convertToTime ?? "NA", source: recipe?.source ?? "", data: recipe?.image.data)
+            let recipeDetails = RecipeDetails(name: recipe?.label ?? "", ingredients: recipe?.ingredientLines ?? [], yield: String(recipe?.yield ?? 0), time: recipe?.totalTime.convertToTime ?? "NA", url: recipe?.url ?? "", data: recipe?.image.data)
             recipeVC.recipeDetails = recipeDetails
+            recipeVC.isComeFromFavorites = false
         }
     }
 

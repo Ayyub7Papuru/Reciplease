@@ -27,9 +27,14 @@ class FavoritesViewController: UIViewController {
         coreDataManager = CoreDataManager(coreDataStack: coredataStack)
         
         favoriteTableView.register(UINib(nibName: "DishesTableViewCell", bundle: nil), forCellReuseIdentifier: "dishCell")
-        favoriteTableView.reloadData()
-
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        favoriteTableView.reloadData()
+    }
+    
+    @IBAction func unwindToFavorite(_ sender: UIStoryboardUnwindSegueSource) {}
 }
 
 extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -47,7 +52,7 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         favoriteTableView.deselectRow(at: indexPath, animated: true)
         let recipe = coreDataManager?.recipesFav[indexPath.row]
-        recipeDetails = RecipeDetails(name: recipe?.name ?? "", ingredients: recipe?.ingredients ?? [], yield: recipe?.yield ?? "NA", time: recipe?.time ?? "NA", source: recipe?.source ?? "", data: recipe?.image)
+        recipeDetails = RecipeDetails(name: recipe?.name ?? "", ingredients: recipe?.ingredients ?? [], yield: recipe?.yield ?? "NA", time: recipe?.time ?? "NA", url: recipe?.url ?? "", data: recipe?.image)
         performSegue(withIdentifier: "favCellToRecipe", sender: nil)
     }
 
@@ -55,11 +60,25 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
         if (segue.identifier == "favCellToRecipe") {
         let vc = segue.destination as! RecipeViewController
             vc.recipeDetails = recipeDetails
+            vc.isComeFromFavorites = true
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
            return favoriteTableView.frame.height / 3
     }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+           let label = UILabel()
+           label.text = "Please add some favorites"
+           label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+           label.textAlignment = .center
+           label.textColor = .darkGray
+           return label
+       }
+
+       func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return coreDataManager?.recipesFav.isEmpty ?? true ? 200 : 0
+       }
 }
 
