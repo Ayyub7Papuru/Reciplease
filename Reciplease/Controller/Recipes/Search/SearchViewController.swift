@@ -8,18 +8,22 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+final class SearchViewController: UIViewController {
     
     // MARK: - Properties
-    var ingredients = [String]()
-    var recipes: Reciplease?
-    let recipeService = RecipeService()
+    
+    private var ingredients = [String]()
+    private var recipes: Reciplease?
+    private let recipeService = RecipeService()
     
     // MARK: - Outlets
-    @IBOutlet weak var ingredientsTextField: UITextField!
-    @IBOutlet weak var ingredientsTableView: UITableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var searchButton: UIButton!
+    
+    @IBOutlet private weak var ingredientsTextField: UITextField!
+    @IBOutlet private weak var ingredientsTableView: UITableView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var searchButton: UIButton!
+    
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,22 +33,24 @@ class SearchViewController: UIViewController {
     }
     
     //MARK: - Functions
+    
     @objc func keyboard() {
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dishesViewController = segue.destination as! DishesViewController
+        guard let dishesViewController = segue.destination as? DishesViewController else { return }
         dishesViewController.recipes = recipes
     }
     
-    @IBAction func clearButtonTapped(_ sender: UIButton) {
+    @IBAction private func clearButtonTapped(_ sender: UIButton) {
         ingredients.removeAll()
         ingredientsTableView.reloadData()
         
     }
-    @IBAction func searchButton(_ sender: UIButton) {
-       startActivityIndicator(sender)
+    
+    @IBAction private func searchButton(_ sender: UIButton) {
+        startActivityIndicator(sender)
         recipeService.getDishes(ingredients: ingredients) { (result) in
             switch result {
             case .success(let recipes):
@@ -64,7 +70,8 @@ class SearchViewController: UIViewController {
             }
         }
     }
-    @IBAction func addButtonTapped(_ sender: UIButton) {
+    
+    @IBAction private func addButtonTapped(_ sender: UIButton) {
         ingredients.append(ingredientsTextField.text!)
         ingredientsTableView.reloadData()
         ingredientsTextField.text = ""
@@ -75,6 +82,7 @@ class SearchViewController: UIViewController {
         activityIndicator.startAnimating()
         sender.setTitle("", for: .normal)
     }
+    
     func stopActivityIndicator(_ sender: UIButton) {
         activityIndicator.stopAnimating()
         sender.setTitle("Search for recipes", for: .normal)
@@ -102,7 +110,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         label.textColor = .darkGray
         return label
     }
-
+    
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return ingredients.isEmpty  ? 200 : 0
     }

@@ -8,24 +8,29 @@
 
 import UIKit
 
-class DishesViewController: UIViewController {
+final class DishesViewController: UIViewController {
+    
     //MARK: - Outlets
-    @IBOutlet weak var dishesTableView: UITableView!
+    
+    @IBOutlet private weak var dishesTableView: UITableView!
     
     //MARK: - Properties
     var recipes: Reciplease?
-    var recipe: Recipe?
+    private var recipe: Recipe?
+    
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dishesTableView.register(UINib(nibName: "DishesTableViewCell", bundle: nil), forCellReuseIdentifier: "dishCell")
-       
+        
     }
     
 }
 
 //MARK: - TableView Extension
+
 extension DishesViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,14 +54,12 @@ extension DishesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "cellToRecipe") {
-            let recipeVC = segue.destination as! RecipeViewController
-            let recipeDetails = RecipeDetails(name: recipe?.label ?? "", ingredients: recipe?.ingredientLines ?? [], yield: String(recipe?.yield ?? 0), time: recipe?.totalTime.convertToTime ?? "NA", url: recipe?.url ?? "", data: recipe?.image.data)
-            recipeVC.recipeDetails = recipeDetails
-            recipeVC.isComeFromFavorites = false
-        }
+        guard let recipeVC = segue.destination as? RecipeViewController else { return }
+        let recipeDetails = RecipeDetails(name: recipe?.label ?? "", ingredients: recipe?.ingredientLines ?? [], yield: String(recipe?.yield ?? 0), time: recipe?.totalTime.convertToTime ?? "NA", url: recipe?.url ?? "", data: recipe?.image.data)
+        recipeVC.recipeDetails = recipeDetails
+        recipeVC.isComeFromFavorites = false
     }
-
+    
 }
 
 extension Int {

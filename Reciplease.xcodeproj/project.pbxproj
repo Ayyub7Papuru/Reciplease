@@ -31,10 +31,9 @@
 		B1437EA22472F03800450433 /* MockRecipeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1437EA12472F03800450433 /* MockRecipeSession.swift */; };
 		B1437EA62472F6A600450433 /* RecipeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1437EA52472F6A600450433 /* RecipeServiceTests.swift */; };
 		B15CFE9323FEED7400B8AE98 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9223FEED7400B8AE98 /* RecipeService.swift */; };
-		B15CFE9523FEF19D00B8AE98 /* RecipeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9423FEF19D00B8AE98 /* RecipeStruct.swift */; };
+		B15CFE9523FEF19D00B8AE98 /* Reciplease.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9423FEF19D00B8AE98 /* Reciplease.swift */; };
 		B15CFE9723FEF51B00B8AE98 /* RecipeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CFE9623FEF51B00B8AE98 /* RecipeSession.swift */; };
 		B172B33E2423774900480295 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B172B33D2423774900480295 /* RecipeViewController.swift */; };
-		B17D7904245C054F00191E7C /* Int+ConvertTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D7903245C054F00191E7C /* Int+ConvertTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,10 +78,9 @@
 		B1437EA12472F03800450433 /* MockRecipeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecipeSession.swift; sourceTree = "<group>"; };
 		B1437EA52472F6A600450433 /* RecipeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeServiceTests.swift; sourceTree = "<group>"; };
 		B15CFE9223FEED7400B8AE98 /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
-		B15CFE9423FEF19D00B8AE98 /* RecipeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStruct.swift; sourceTree = "<group>"; };
+		B15CFE9423FEF19D00B8AE98 /* Reciplease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reciplease.swift; sourceTree = "<group>"; };
 		B15CFE9623FEF51B00B8AE98 /* RecipeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSession.swift; sourceTree = "<group>"; };
 		B172B33D2423774900480295 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
-		B17D7903245C054F00191E7C /* Int+ConvertTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+ConvertTime.swift"; sourceTree = "<group>"; };
 		D76C3845DCD4A7143A3C4679 /* Pods-RecipleaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipleaseTests.release.xcconfig"; path = "Target Support Files/Pods-RecipleaseTests/Pods-RecipleaseTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				B142AD6C24405866009DFBEB /* String+Data.swift */,
-				B17D7903245C054F00191E7C /* Int+ConvertTime.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,7 +205,7 @@
 		B15CFE9923FF02FA00B8AE98 /* RecipeModel */ = {
 			isa = PBXGroup;
 			children = (
-				B15CFE9423FEF19D00B8AE98 /* RecipeStruct.swift */,
+				B15CFE9423FEF19D00B8AE98 /* Reciplease.swift */,
 				B13C2E202433B0BF00F1C694 /* CoreDataStack.swift */,
 				B13C2E222433B10C00F1C694 /* CoreDataManager.swift */,
 				B15CFE9623FEF51B00B8AE98 /* RecipeSession.swift */,
@@ -456,7 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B13B5A6D2429154A00031018 /* Reciplease.xcdatamodeld in Sources */,
-				B15CFE9523FEF19D00B8AE98 /* RecipeStruct.swift in Sources */,
+				B15CFE9523FEF19D00B8AE98 /* Reciplease.swift in Sources */,
 				B172B33E2423774900480295 /* RecipeViewController.swift in Sources */,
 				B13E40642407EF1E000754E4 /* DishesTableViewCell.swift in Sources */,
 				B116E0C423F5CC0A00999B85 /* TabBarControlViewController.swift in Sources */,
@@ -470,7 +467,6 @@
 				B13E40672407F382000754E4 /* DishesViewController.swift in Sources */,
 				B13C2E232433B10C00F1C694 /* CoreDataManager.swift in Sources */,
 				B116E0C623F5CCA000999B85 /* TabBar.swift in Sources */,
-				B17D7904245C054F00191E7C /* Int+ConvertTime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -622,7 +618,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -647,7 +643,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SayajinPapuru.Reciplease;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -666,7 +662,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SayajinPapuru.Reciplease;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

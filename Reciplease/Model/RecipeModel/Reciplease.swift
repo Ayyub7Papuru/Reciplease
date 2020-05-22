@@ -9,17 +9,17 @@
 import Foundation
 
 // MARK: - Welcome
-struct Reciplease: Codable {
+struct Reciplease: Decodable {
     let hits: [Hit]
 }
 
 // MARK: - Hit
-struct Hit: Codable {
+struct Hit: Decodable {
     let recipe: Recipe
 }
 
 // MARK: - Recipe
-struct Recipe: Codable {
+struct Recipe: Decodable {
     let label: String
     let image: String
     let url: String
@@ -30,7 +30,7 @@ struct Recipe: Codable {
 }
 
 // MARK: - Ingredient
-struct Ingredient: Codable {
+struct Ingredient: Decodable {
     let text: String
 }
 
